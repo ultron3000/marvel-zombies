@@ -1,140 +1,33 @@
-    body {
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="%23e23636" d="M16,2 C8.2,2 2,8.2 2,16 C2,23.8 8.2,30 16,30 C23.8,30 30,23.8 30,16 C30,8.2 23.8,2 16,2 Z M16,4 C22.6,4 28,9.4 28,16 C28,22.6 22.6,28 16,28 C9.4,28 4,22.6 4,16 C4,9.4 9.4,4 16,4 Z"/><path fill="%23e23636" d="M16,8 C11.6,8 8,11.6 8,16 C8,20.4 11.6,24 16,24 C20.4,24 24,20.4 24,16 C24,11.6 20.4,8 16,8 Z M16,10 C19.3,10 22,12.7 22,16 C22,19.3 19.3,22 16,22 C12.7,22 10,19.3 10,16 C10,12.7 12.7,10 16,10 Z"/></svg>'), auto;
-    }
-    button, a {
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="%23ff0000" d="M16,2 C8.2,2 2,8.2 2,16 C2,23.8 8.2,30 16,30 C23.8,30 30,23.8 30,16 C30,8.2 23.8,2 16,2 Z M16,4 C22.6,4 28,9.4 28,16 C28,22.6 22.6,28 16,28 C9.4,28 4,22.6 4,16 C4,9.4 9.4,4 16,4 Z"/><path fill="%23ff0000" d="M16,8 C11.6,8 8,11.6 8,16 C8,20.4 11.6,24 16,24 C20.4,24 24,20.4 24,16 C24,11.6 20.4,8 16,8 Z M16,10 C19.3,10 22,12.7 22,16 C22,19.3 19.3,22 16,22 C12.7,22 10,19.3 10,16 C10,12.7 12.7,10 16,10 Z"/></svg>'), pointer;
-    }
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-  <title>Marvel Zombies Season 1 - Episodes</title>
+  <title>Marvel Zombies Season 1</title>
   <style>
     body {
-      font-family: 'Creepster', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.1 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+      background: #121212;
       color: #eee;
-      margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
     }
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M0,0 L100,100 C150,50 200,150 250,50 C300,-50 350,150 400,50 L500,150" stroke="rgba(226,54,54,0.1)" stroke-width="5" fill="none"/></svg>') no-repeat;
-      pointer-events: none;
-      z-index: -1;
-      opacity: 0.3;
-    }
-
     h1 {
-      margin-bottom: 20px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-align: center;
       color: #e23636;
-      text-shadow: 0 0 10px #e23636, 0 0 20px #e23636, 0 0 30px #e23636, 0 0 40px #ff0000, 0 0 70px #ff0000;
-      font-size: 3em;
-      position: relative;
-      animation: pulse 2s infinite alternate;
+      text-shadow: 0 0 10px #e23636;
+      margin-bottom: 30px;
+      text-align: center;
     }
-    @keyframes pulse {
-      from { text-shadow: 0 0 10px #e23636, 0 0 20px #e23636, 0 0 30px #e23636; }
-      to { text-shadow: 0 0 15px #e23636, 0 0 25px #e23636, 0 0 35px #e23636, 0 0 45px #ff0000, 0 0 80px #ff0000; }
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
     .episodes {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       width: 100%;
+      max-width: 1000px;
     }
-
-    .video-container {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      background: #000;
-      border-radius: 8px;
-    }
-
-    .video-wrapper video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .video-controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 15px;
-    }
-
-    .control-button {
-      background: #e23636;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .control-button:hover {
-      background: #b22222;
-    }
-
-    .video-info {
-      color: #ddd;
-      font-size: 0.9em;
-    }
-
-    .episode-desc {
-      color: #aaa;
-      font-size: 0.9em;
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-
-    .loading, .error {
-      padding: 15px;
-      text-align: center;
-      background: rgba(0,0,0,0.3);
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-
-    .error {
-      color: #ff6b6b;
-    }
-
     .episode-card {
       background: #222;
       border-radius: 10px;
@@ -142,98 +35,48 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.3s ease;
-      position: relative;
-      border: 1px solid #e23636;
+      transition: transform 0.2s ease;
     }
-
-    .episode-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10,10 Q30,5 50,20 T90,10" stroke="rgba(226,54,54,0.2)" stroke-width="2" fill="none"/></svg>');
-      pointer-events: none;
-      z-index: 1;
-    }
-
     .episode-card:hover {
-      transform: scale(1.05) rotate(1deg);
-      box-shadow: 0 0 25px #e23636, 0 0 50px rgba(226, 54, 54, 0.5);
-      border: 1px solid #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #e23636;
     }
-
     .episode-img {
       width: 100%;
       height: 140px;
       object-fit: cover;
       filter: brightness(0.9);
     }
-
     .episode-info {
       padding: 15px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: center;
     }
-
     .episode-title {
       font-size: 1.2em;
       margin-bottom: 10px;
       font-weight: 700;
       color: #f44336;
-      text-align: center;
     }
-
     .play-button {
       background-color: #e23636;
       border: none;
       color: white;
-      padding: 12px 15px;
-      font-size: 1.1em;
+      padding: 10px 15px;
+      font-size: 1em;
       cursor: pointer;
       border-radius: 5px;
-      text-align: center;
-      transition: all 0.3s ease;
-      width: 100%;
       user-select: none;
-      position: relative;
-      overflow: hidden;
-      font-family: 'Creepster', cursive;
-      letter-spacing: 1px;
-      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+      transition: background-color 0.3s ease;
+      width: 100%;
     }
-
     .play-button:hover {
       background-color: #b22222;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
     }
-
-    .play-button::after {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -60%;
-      width: 200%;
-      height: 200%;
-      background: rgba(255,255,255,0.1);
-      transform: rotate(30deg);
-      transition: all 0.3s;
-    }
-
-    .play-button:hover::after {
-      left: 100%;
-    }
-
     @media (max-width: 500px) {
-      .episode-card {
-        height: auto;
-      }
       .episode-img {
         height: 120px;
       }
@@ -241,130 +84,51 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Marvel Zombies - Season 1</h1>
-    
-    <div class="video-container" id="videoContainer" style="display: none;">
-      <div class="video-wrapper">
-        <video id="videoPlayer" controls>
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-controls">
-          <button id="backButton" class="control-button">← Back to Episodes</button>
-          <div class="video-info" id="videoInfo"></div>
-        </div>
+  <h1>Marvel Zombies - Season 1</h1>
+  <div class="episodes">
+    <div class="episode-card">
+      <img src="https://via.placeholder.com/400x140?text=Episode+1" alt="Episode 1" class="episode-img" />
+      <div class="episode-info">
+        <div class="episode-title">Episode 1</div>
+        <button class="play-button" onclick="playEpisode(1)">▶ Play Episode 1</button>
       </div>
     </div>
-
-    <div class="episodes" id="episodesList">
-      <div class="episode-card">
-        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+1" alt="Episode 1" />
-        <div class="episode-info">
-          <div class="episode-title">Episode 1: A New Beginning</div>
-          <div class="episode-desc">The zombie outbreak begins as heroes fall prey to the virus.</div>
-          <button class="play-button" onclick="loadEpisode(1)">▶ Play Episode 1</button>
-        </div>
+    <div class="episode-card">
+      <img src="https://via.placeholder.com/400x140?text=Episode+2" alt="Episode 2" class="episode-img" />
+      <div class="episode-info">
+        <div class="episode-title">Episode 2</div>
+        <button class="play-button" onclick="playEpisode(2)">▶ Play Episode 2</button>
       </div>
-
-      <div class="episode-card">
-        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+2" alt="Episode 2" />
-        <div class="episode-info">
-          <div class="episode-title">Episode 2: Infection Spreads</div>
-          <div class="episode-desc">The remaining heroes struggle to contain the outbreak.</div>
-          <button class="play-button" onclick="loadEpisode(2)">▶ Play Episode 2</button>
-        </div>
+    </div>
+    <div class="episode-card">
+      <img src="https://via.placeholder.com/400x140?text=Episode+3" alt="Episode 3" class="episode-img" />
+      <div class="episode-info">
+        <div class="episode-title">Episode 3</div>
+        <button class="play-button" onclick="playEpisode(3)">▶ Play Episode 3</button>
       </div>
-
-      <div class="episode-card">
-        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+3" alt="Episode 3" />
-        <div class="episode-info">
-          <div class="episode-title">Episode 3: Last Stand</div>
-          <div class="episode-desc">The final survivors make their desperate last stand.</div>
-          <button class="play-button" onclick="loadEpisode(3)">▶ Play Episode 3</button>
-        </div>
-      </div>
-
-      <div class="episode-card">
-        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+4" alt="Episode 4" />
-        <div class="episode-info">
-          <div class="episode-title">Episode 4: Aftermath</div>
-          <div class="episode-desc">The world deals with the consequences of the outbreak.</div>
-          <button class="play-button" onclick="loadEpisode(4)">▶ Play Episode 4</button>
-        </div>
+    </div>
+    <div class="episode-card">
+      <img src="https://via.placeholder.com/400x140?text=Episode+4" alt="Episode 4" class="episode-img" />
+      <div class="episode-info">
+        <div class="episode-title">Episode 4</div>
+        <button class="play-button" onclick="playEpisode(4)">▶ Play Episode 4</button>
       </div>
     </div>
   </div>
 
   <script>
-    const episodeData = {
-      1: {
-        url: 'https://gradejumper.site/lightmist83.live/file2/qfxJgoxM+CVNB4F9jpRo5Fs4pkEATQ0EwyphRxqg5oJwrwb0PUU2M7SCmqIp+PxTLP5d6ktjKVB4z1kG~26nRrLff0Dc1jbbNheA5VZB7bmM4lEmwdaDdhMai62GxGbAa32Bv687iBfy7JZT51vFftbJLmuqH7F0y5CECkhaX04=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
-        title: 'Episode 1: A New Beginning',
-        description: 'The zombie outbreak begins as heroes fall prey to the virus.'
-      },
-      2: {
-        url: 'https://gradejumper.site/rainwhisper40.xyz/file2/Y0EYVi7dt0daFDPM5cG+h9XLg5MHMrC2Sergeh1PnQZkzIwY+4meStASsaVyEfwwXBhqEDCC+yHRj~DeDwFw5qouN53~13VidNCS1S+5r+YPV9AqcVSmlXmCfw2cCXHXnoYvzS2frR84iSBzw6N+ylUzkQ2eZ13VklBPo7Fhygg=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
-        title: 'Episode 2: Infection Spreads',
-        description: 'The remaining heroes struggle to contain the outbreak.'
-      },
-      3: {
-        url: 'https://gradejumper.site/snowblink22.pro/file2/9mRw6oOhPUpNeUvUxa0yQ8QpKonu2006kreM8QnBJUJUXDYSQIB6lKos7aEJkEOEaTQngu1MfbqZ2aJcr3oJaazbz6v9HJWfpLdIuskBUeR+AuPIUxyJvprkBbE9hJyhO1Zh9I4auR3~hx~xuY+CzyT4UGVXgsZw6wISw+CLAGU=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
-        title: 'Episode 3: Last Stand',
-        description: 'The final survivors make their desperate last stand.'
-      },
-      4: {
-        url: 'https://gradejumper.site/lightmist83.live/file2/~c0yfaB3IPjkwxDB+aVPEiRBudABplWPpZqQPCP8U0h8~gaF7PtvEWHZUxBdhd3bZBDKCe49ISW6DAkuG~qGLwafP9nH3W~A45IazL+3dN5StxCW0~eKrfRhr530NbbA5rmQKrq23W0q9n89zFi+v3JFN6jKQLuheH611LGcHpE=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
-        title: 'Episode 4: Aftermath',
-        description: 'The world deals with the consequences of the outbreak.'
-      }
+    const episodeLinks = {
+      1: 'https://gradejumper.site/lightmist83.live/file2/qfxJgoxM+CVNB4F9jpRo5Fs4pkEATQ0EwyphRxqg5oJwrwb0PUU2M7SCmqIp+PxTLP5d6ktjKVB4z1kG~26nRrLff0Dc1jbbNheA5VZB7bmM4lEmwdaDdhMai62GxGbAa32Bv687iBfy7JZT51vFftbJLmuqH7F0y5CECkhaX04=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+      2: 'https://gradejumper.site/rainwhisper40.xyz/file2/Y0EYVi7dt0daFDPM5cG+h9XLg5MHMrC2Sergeh1PnQZkzIwY+4meStASsaVyEfwwXBhqEDCC+yHRj~DeDwFw5qouN53~13VidNCS1S+5r+YPV9AqcVSmlXmCfw2cCXHXnoYvzS2frR84iSBzw6N+ylUzkQ2eZ13VklBPo7Fhygg=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+      3: 'https://gradejumper.site/snowblink22.pro/file2/9mRw6oOhPUpNeUvUxa0yQ8QpKonu2006kreM8QnBJUJUXDYSQIB6lKos7aEJkEOEaTQngu1MfbqZ2aJcr3oJaazbz6v9HJWfpLdIuskBUeR+AuPIUxyJvprkBbE9hJyhO1Zh9I4auR3~hx~xuY+CzyT4UGVXgsZw6wISw+CLAGU=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+      4: 'https://gradejumper.site/lightmist83.live/file2/~c0yfaB3IPjkwxDB+aVPEiRBudABplWPpZqQPCP8U0h8~gaF7PtvEWHZUxBdhd3bZBDKCe49ISW6DAkuG~qGLwafP9nH3W~A45IazL+3dN5StxCW0~eKrfRhr530NbbA5rmQKrq23W0q9n89zFi+v3JFN6jKQLuheH611LGcHpE=/MTA4MA==/aW5kZXgubTN1OA==.m3u8'
     };
 
-    const videoPlayer = document.getElementById('videoPlayer');
-    const videoContainer = document.getElementById('videoContainer');
-    const episodesList = document.getElementById('episodesList');
-    const videoInfo = document.getElementById('videoInfo');
-    const backButton = document.getElementById('backButton');
-
-    function loadEpisode(ep) {
-      const episode = episodeData[ep];
-      if (!episode) {
-        showError('Episode not found');
-        return;
-      }
-
-      // Show loading state
-      videoInfo.innerHTML = `<div class="loading">Loading ${episode.title}...</div>`;
-      videoContainer.style.display = 'block';
-      episodesList.style.display = 'none';
-
-      // Set video source and info
-      videoPlayer.src = episode.url;
-      videoInfo.innerHTML = `
-        <h3>${episode.title}</h3>
-        <p>${episode.description}</p>
-      `;
-
-      videoPlayer.load();
-      videoPlayer.play().catch(e => {
-        showError('Error playing video: ' + e.message);
-      });
-    }
-
-    function showError(message) {
-      videoInfo.innerHTML = `<div class="error">${message}</div>`;
-    }
-
-    backButton.addEventListener('click', () => {
-      videoContainer.style.display = 'none';
-      episodesList.style.display = 'grid';
-      videoPlayer.pause();
-    });
-
-    // Handle URL parameters for direct episode loading
-    const urlParams = new URLSearchParams(window.location.search);
-    const episodeParam = urlParams.get('episode');
-    if (episodeParam) {
-      loadEpisode(parseInt(episodeParam));
+    function playEpisode(num) {
+      const url = episodeLinks[num];
+      if (!url) return alert('Episode not found');
+      const encodedUrl = encodeURIComponent(url);
+      window.location.href = `player.html?video=${encodedUrl}`;
     }
   </script>
 </body>
