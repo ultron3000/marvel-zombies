@@ -1,459 +1,371 @@
+    body {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="%23e23636" d="M16,2 C8.2,2 2,8.2 2,16 C2,23.8 8.2,30 16,30 C23.8,30 30,23.8 30,16 C30,8.2 23.8,2 16,2 Z M16,4 C22.6,4 28,9.4 28,16 C28,22.6 22.6,28 16,28 C9.4,28 4,22.6 4,16 C4,9.4 9.4,4 16,4 Z"/><path fill="%23e23636" d="M16,8 C11.6,8 8,11.6 8,16 C8,20.4 11.6,24 16,24 C20.4,24 24,20.4 24,16 C24,11.6 20.4,8 16,8 Z M16,10 C19.3,10 22,12.7 22,16 C22,19.3 19.3,22 16,22 C12.7,22 10,19.3 10,16 C10,12.7 12.7,10 16,10 Z"/></svg>'), auto;
+    }
+    button, a {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="%23ff0000" d="M16,2 C8.2,2 2,8.2 2,16 C2,23.8 8.2,30 16,30 C23.8,30 30,23.8 30,16 C30,8.2 23.8,2 16,2 Z M16,4 C22.6,4 28,9.4 28,16 C28,22.6 22.6,28 16,28 C9.4,28 4,22.6 4,16 C4,9.4 9.4,4 16,4 Z"/><path fill="%23ff0000" d="M16,8 C11.6,8 8,11.6 8,16 C8,20.4 11.6,24 16,24 C20.4,24 24,20.4 24,16 C24,11.6 20.4,8 16,8 Z M16,10 C19.3,10 22,12.7 22,16 C22,19.3 19.3,22 16,22 C12.7,22 10,19.3 10,16 C10,12.7 12.7,10 16,10 Z"/></svg>'), pointer;
+    }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Zombies - Season 1 | Disney+</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap');
-        
-        :root {
-            --marvel-red: #ed1d24;
-            --marvel-dark: #151515;
-            --marvel-gold: #f0c808;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--marvel-dark);
-            color: white;
-        }
-        
-        .marvel-font {
-            font-family: 'Bangers', cursive;
-            letter-spacing: 1px;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v2/tv_banners/202/51/2025149.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 70vh;
-        }
-        
-        .episode-card {
-            transition: all 0.3s ease;
-            background-color: rgba(30, 30, 30, 0.8);
-            border-left: 4px solid var(--marvel-red);
-        }
-        
-        .episode-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(237, 29, 36, 0.3);
-        }
-        
-        .watch-btn {
-            background-color: var(--marvel-red);
-            transition: all 0.3s ease;
-        }
-        
-        .watch-btn:hover {
-            background-color: #c0171d;
-            transform: scale(1.05);
-        }
-        
-        .zombie-text {
-            color: var(--marvel-red);
-            text-shadow: 0 0 5px rgba(237, 29, 36, 0.5);
-        }
-        
-        .progress-bar {
-            height: 4px;
-            background-color: #444;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background-color: var(--marvel-red);
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-        
-        .character-card {
-            background-color: rgba(20, 20, 20, 0.9);
-            border-top: 3px solid var(--marvel-red);
-        }
-        
-        .tab-active {
-            border-bottom: 3px solid var(--marvel-red);
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <title>Marvel Zombies Season 1 - Episodes</title>
+  <style>
+    body {
+      font-family: 'Creepster', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.1 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M0,0 L100,100 C150,50 200,150 250,50 C300,-50 350,150 400,50 L500,150" stroke="rgba(226,54,54,0.1)" stroke-width="5" fill="none"/></svg>') no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-align: center;
+      color: #e23636;
+      text-shadow: 0 0 10px #e23636, 0 0 20px #e23636, 0 0 30px #e23636, 0 0 40px #ff0000, 0 0 70px #ff0000;
+      font-size: 3em;
+      position: relative;
+      animation: pulse 2s infinite alternate;
+    }
+    @keyframes pulse {
+      from { text-shadow: 0 0 10px #e23636, 0 0 20px #e23636, 0 0 30px #e23636; }
+      to { text-shadow: 0 0 15px #e23636, 0 0 25px #e23636, 0 0 35px #e23636, 0 0 45px #ff0000, 0 0 80px #ff0000; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .episodes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      width: 100%;
+    }
+
+    .video-container {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      border-radius: 8px;
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .control-button {
+      background: #e23636;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .control-button:hover {
+      background: #b22222;
+    }
+
+    .video-info {
+      color: #ddd;
+      font-size: 0.9em;
+    }
+
+    .episode-desc {
+      color: #aaa;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .loading, .error {
+      padding: 15px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    .error {
+      color: #ff6b6b;
+    }
+
+    .episode-card {
+      background: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+      border: 1px solid #e23636;
+    }
+
+    .episode-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10,10 Q30,5 50,20 T90,10" stroke="rgba(226,54,54,0.2)" stroke-width="2" fill="none"/></svg>');
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .episode-card:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 25px #e23636, 0 0 50px rgba(226, 54, 54, 0.5);
+      border: 1px solid #ff0000;
+    }
+
+    .episode-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+
+    .episode-info {
+      padding: 15px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .episode-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #f44336;
+      text-align: center;
+    }
+
+    .play-button {
+      background-color: #e23636;
+      border: none;
+      color: white;
+      padding: 12px 15px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: 100%;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Creepster', cursive;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    .play-button:hover {
+      background-color: #b22222;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(226, 54, 54, 0.4);
+    }
+
+    .play-button::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(30deg);
+      transition: all 0.3s;
+    }
+
+    .play-button:hover::after {
+      left: 100%;
+    }
+
+    @media (max-width: 500px) {
+      .episode-card {
+        height: auto;
+      }
+      .episode-img {
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-black py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center">
-            <i class="fab fa-disney text-3xl text-white mr-2"></i>
-            <span class="marvel-font text-2xl text-white">MARVEL ZOMBIES</span>
+  <div class="container">
+    <h1>Marvel Zombies - Season 1</h1>
+    
+    <div class="video-container" id="videoContainer" style="display: none;">
+      <div class="video-wrapper">
+        <video id="videoPlayer" controls>
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+          <button id="backButton" class="control-button">← Back to Episodes</button>
+          <div class="video-info" id="videoInfo"></div>
         </div>
-        <div class="hidden md:flex space-x-6">
-            <a href="#" class="text-white hover:text-red-500">Home</a>
-            <a href="#" class="text-white hover:text-red-500">Episodes</a>
-            <a href="#" class="text-white hover:text-red-500">Characters</a>
-            <a href="#" class="text-white hover:text-red-500">Gallery</a>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md">
-            <i class="fas fa-play mr-2"></i>Watch Now
-        </button>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-bg flex items-center justify-center text-center p-8">
-        <div class="max-w-4xl">
-            <h1 class="marvel-font text-5xl md:text-7xl mb-4 zombie-text">MARVEL ZOMBIES</h1>
-            <p class="text-xl mb-6">The animated horror series based on the popular Marvel Comics storyline</p>
-            <div class="flex justify-center space-x-4">
-                <button class="watch-btn text-white px-8 py-3 rounded-md text-lg flex items-center">
-                    <i class="fas fa-play mr-2"></i> Watch Season 1
-                </button>
-                <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md text-lg hover:bg-white hover:text-black transition">
-                    <i class="fas fa-info-circle mr-2"></i> More Info
-                </button>
-            </div>
-            <div class="mt-8">
-                <div class="progress-bar w-full rounded-full mb-2">
-                    <div class="progress-fill rounded-full" style="width: 75%;"></div>
-                </div>
-                <p class="text-gray-400">New episode every Wednesday</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Season Info -->
-    <section class="py-12 px-6 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-8">
-            <div class="md:w-1/3">
-                <img src="https://m.media-amazon.com/images/M/MV5BMTU0YjU0NDItYjE5Ny00ODQzLTg3OTYtYzNlMzY1MWY4ZTM0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" 
-                     alt="Marvel Zombies Poster" class="w-full rounded-lg shadow-lg">
-            </div>
-            <div class="md:w-2/3">
-                <h2 class="marvel-font text-4xl mb-4 zombie-text">Season 1 (2024)</h2>
-                <div class="flex items-center mb-4">
-                    <span class="bg-red-600 text-white px-2 py-1 rounded mr-3 text-sm">TV-MA</span>
-                    <span class="text-gray-400 mr-3">5 Episodes</span>
-                    <span class="text-gray-400">Animation, Action, Horror</span>
-                </div>
-                <p class="text-lg mb-6">
-                    In an alternate universe, a zombie virus has infected most of Earth's super-powered heroes and villains. 
-                    A ragtag group of young survivors must navigate this apocalyptic wasteland, avoiding the infected versions 
-                    of their former idols while searching for a cure. Based on the popular Marvel Comics storyline.
-                </p>
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold mb-2">Starring</h3>
-                    <p>Josh Keaton, Dove Cameron, Hudson Thames, Lyric Ross, Leonardo Nam</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-2">Creators</h3>
-                    <p>Zeb Wells, Bryan Andrews</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tabs -->
-    <div class="max-w-6xl mx-auto px-6 border-b border-gray-800">
-        <div class="flex space-x-8">
-            <button class="tab-active py-3 px-1 font-medium">Episodes</button>
-            <button class="text-gray-400 py-3 px-1 font-medium hover:text-white">Characters</button>
-            <button class="text-gray-400 py-3 px-1 font-medium hover:text-white">Trailers & More</button>
-            <button class="text-gray-400 py-3 px-1 font-medium hover:text-white">Details</button>
-        </div>
+      </div>
     </div>
 
-    <!-- Episodes -->
-    <section class="py-8 px-6 max-w-6xl mx-auto">
-        <h2 class="marvel-font text-3xl mb-6 zombie-text">Episodes</h2>
-        
-        <!-- Episode 1 -->
-        <div class="episode-card rounded-lg p-6 mb-6 cursor-pointer">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/4 relative">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZWI0YjY4OGYtYjU3Yi00YjY0LTg0YjAtYzQwYjY0YzY4ZGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,214_.jpg" 
-                         alt="Episode 1" class="w-full rounded-lg">
-                    <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
-                        42m
-                    </div>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold">1. Day One</h3>
-                        <span class="text-gray-400">Aug 16, 2024</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        The zombie virus spreads rapidly through the superhero community. A group of young survivors including 
-                        Kate Bishop, Kamala Khan, and Miles Morales witness the fall of the Avengers as they try to escape New York.
-                    </p>
-                    <div class="flex items-center text-gray-400 text-sm mb-4">
-                        <span class="mr-4"><i class="fas fa-star text-yellow-400 mr-1"></i> 8.9/10</span>
-                        <span>Director: Bryan Andrews</span>
-                    </div>
-                    <button class="watch-btn text-white px-6 py-2 rounded-md">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                </div>
-            </div>
+    <div class="episodes" id="episodesList">
+      <div class="episode-card">
+        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+1" alt="Episode 1" />
+        <div class="episode-info">
+          <div class="episode-title">Episode 1: A New Beginning</div>
+          <div class="episode-desc">The zombie outbreak begins as heroes fall prey to the virus.</div>
+          <button class="play-button" onclick="loadEpisode(1)">▶ Play Episode 1</button>
         </div>
-        
-        <!-- Episode 2 -->
-        <div class="episode-card rounded-lg p-6 mb-6 cursor-pointer">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/4 relative">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZWI0YjY4OGYtYjU3Yi00YjY0LTg0YjAtYzQwYjY0YzY4ZGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,214_.jpg" 
-                         alt="Episode 2" class="w-full rounded-lg">
-                    <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
-                        45m
-                    </div>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold">2. The Hunger</h3>
-                        <span class="text-gray-400">Aug 23, 2024</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        The survivors take refuge in an abandoned S.H.I.E.L.D. facility where they discover disturbing footage of 
-                        Patient Zero. Meanwhile, Zombie Captain America leads a horde toward their location.
-                    </p>
-                    <div class="flex items-center text-gray-400 text-sm mb-4">
-                        <span class="mr-4"><i class="fas fa-star text-yellow-400 mr-1"></i> 9.1/10</span>
-                        <span>Director: Bryan Andrews</span>
-                    </div>
-                    <button class="watch-btn text-white px-6 py-2 rounded-md">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Episode 3 -->
-        <div class="episode-card rounded-lg p-6 mb-6 cursor-pointer">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/4 relative">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZWI0YjY4OGYtYjU3Yi00YjY0LTg0YjAtYzQwYjY0YzY4ZGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,214_.jpg" 
-                         alt="Episode 3" class="w-full rounded-lg">
-                    <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
-                        47m
-                    </div>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold">3. Flesh and Blood</h3>
-                        <span class="text-gray-400">Aug 30, 2024</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        The group encounters Zombie Wolverine in the Canadian wilderness. Flashbacks reveal the origins of the virus 
-                        as the survivors debate whether to seek out the rumored cure in Wakanda.
-                    </p>
-                    <div class="flex items-center text-gray-400 text-sm mb-4">
-                        <span class="mr-4"><i class="fas fa-star text-yellow-400 mr-1"></i> 9.3/10</span>
-                        <span>Director: Bryan Andrews</span>
-                    </div>
-                    <button class="watch-btn text-white px-6 py-2 rounded-md">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Episode 4 -->
-        <div class="episode-card rounded-lg p-6 mb-6 cursor-pointer">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/4 relative">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZWI0YjY4OGYtYjU3Yi00YjY0LTg0YjAtYzQwYjY0YzY4ZGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,214_.jpg" 
-                         alt="Episode 4" class="w-full rounded-lg">
-                    <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
-                        49m
-                    </div>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold">4. Wakanda Forever... Not</h3>
-                        <span class="text-gray-400">Sep 6, 2024</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        The survivors reach Wakanda only to find it overrun by infected Black Panthers. Shuri, the last uninfected 
-                        royal, reveals a shocking truth about the virus's origins and a possible cure.
-                    </p>
-                    <div class="flex items-center text-gray-400 text-sm mb-4">
-                        <span class="mr-4"><i class="fas fa-star text-yellow-400 mr-1"></i> 9.5/10</span>
-                        <span>Director: Bryan Andrews</span>
-                    </div>
-                    <button class="watch-btn text-white px-6 py-2 rounded-md">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Episode 5 -->
-        <div class="episode-card rounded-lg p-6 mb-6 cursor-pointer">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/4 relative">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZWI0YjY4OGYtYjU3Yi00YjY0LTg0YjAtYzQwYjY0YzY4ZGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX380_CR0,0,380,214_.jpg" 
-                         alt="Episode 5" class="w-full rounded-lg">
-                    <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 px-2 py-1 rounded text-sm">
-                        52m
-                    </div>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-2xl font-bold">5. All Hope Lies in Doom</h3>
-                        <span class="text-gray-400">Sep 13, 2024</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        In the explosive season finale, the survivors make a desperate alliance with Doctor Doom, the only major 
-                        villain who remains uninfected. The fate of humanity hangs in the balance as the zombie heroes launch their 
-                        final assault.
-                    </p>
-                    <div class="flex items-center text-gray-400 text-sm mb-4">
-                        <span class="mr-4"><i class="fas fa-star text-yellow-400 mr-1"></i> 9.7/10</span>
-                        <span>Director: Bryan Andrews</span>
-                    </div>
-                    <button class="watch-btn text-white px-6 py-2 rounded-md">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
 
-    <!-- Characters -->
-    <section class="py-12 px-6 bg-gray-900">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="marvel-font text-3xl mb-8 zombie-text text-center">Main Characters</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Character 1 -->
-                <div class="character-card rounded-lg overflow-hidden text-center p-4">
-                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/07/marvel-zombies-kate-bishop.jpg" 
-                         alt="Kate Bishop" class="w-full h-48 object-cover rounded-md mb-3">
-                    <h3 class="font-bold text-lg">Kate Bishop</h3>
-                    <p class="text-gray-400 text-sm">Hawkeye</p>
-                    <p class="text-gray-300 text-sm mt-2">The de facto leader of the survivor group</p>
-                </div>
-                
-                <!-- Character 2 -->
-                <div class="character-card rounded-lg overflow-hidden text-center p-4">
-                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/07/marvel-zombies-ms-marvel.jpg" 
-                         alt="Kamala Khan" class="w-full h-48 object-cover rounded-md mb-3">
-                    <h3 class="font-bold text-lg">Kamala Khan</h3>
-                    <p class="text-gray-400 text-sm">Ms. Marvel</p>
-                    <p class="text-gray-300 text-sm mt-2">The heart of the team, keeping hope alive</p>
-                </div>
-                
-                <!-- Character 3 -->
-                <div class="character-card rounded-lg overflow-hidden text-center p-4">
-                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/07/marvel-zombies-miles-morales.jpg" 
-                         alt="Miles Morales" class="w-full h-48 object-cover rounded-md mb-3">
-                    <h3 class="font-bold text-lg">Miles Morales</h3>
-                    <p class="text-gray-400 text-sm">Spider-Man</p>
-                    <p class="text-gray-300 text-sm mt-2">Struggling with the loss of his mentor</p>
-                </div>
-                
-                <!-- Character 4 -->
-                <div class="character-card rounded-lg overflow-hidden text-center p-4">
-                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/07/marvel-zombies-shuri.jpg" 
-                         alt="Shuri" class="w-full h-48 object-cover rounded-md mb-3">
-                    <h3 class="font-bold text-lg">Shuri</h3>
-                    <p class="text-gray-400 text-sm">Black Panther</p>
-                    <p class="text-gray-300 text-sm mt-2">Last survivor of Wakanda's royal family</p>
-                </div>
-            </div>
+      <div class="episode-card">
+        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+2" alt="Episode 2" />
+        <div class="episode-info">
+          <div class="episode-title">Episode 2: Infection Spreads</div>
+          <div class="episode-desc">The remaining heroes struggle to contain the outbreak.</div>
+          <button class="play-button" onclick="loadEpisode(2)">▶ Play Episode 2</button>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="bg-black py-8 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center">
-                        <i class="fab fa-disney text-3xl text-white mr-2"></i>
-                        <span class="marvel-font text-2xl text-white">MARVEL ZOMBIES</span>
-                    </div>
-                    <p class="text-gray-400 mt-2">© 2024 Disney and its related entities. All Rights Reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div>
-                        <h3 class="text-white font-bold mb-4">Streaming</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white">Disney+</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Hulu</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">ESPN+</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold mb-4">Marvel</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white">Marvel.com</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Marvel Insider</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Marvel Unlimited</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold mb-4">Company</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white">About Disney</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Corporate Responsibility</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-bold mb-4">Help</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Gift Cards</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Supported Devices</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="episode-card">
+        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+3" alt="Episode 3" />
+        <div class="episode-info">
+          <div class="episode-title">Episode 3: Last Stand</div>
+          <div class="episode-desc">The final survivors make their desperate last stand.</div>
+          <button class="play-button" onclick="loadEpisode(3)">▶ Play Episode 3</button>
         </div>
-    </footer>
+      </div>
 
-    <script>
-        // Simple animation for progress bar
-        document.addEventListener('DOMContentLoaded', function() {
-            const progressFill = document.querySelector('.progress-fill');
-            let width = 0;
-            const interval = setInterval(() => {
-                if (width >= 75) {
-                    clearInterval(interval);
-                } else {
-                    width++;
-                    progressFill.style.width = width + '%';
-                }
-            }, 20);
-            
-            // Tab functionality
-            const tabs = document.querySelectorAll('.border-b button');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('tab-active', 'text-white'));
-                    tabs.forEach(t => t.classList.add('text-gray-400'));
-                    tab.classList.add('tab-active', 'text-white');
-                    tab.classList.remove('text-gray-400');
-                });
-            });
-            
-            // Episode card hover effect enhancement
-            const episodeCards = document.querySelectorAll('.episode-card');
-            episodeCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.querySelector('img').style.transform = 'scale(1.05)';
-                });
-                card.addEventListener('mouseleave', () => {
-                    card.querySelector('img').style.transform = 'scale(1)';
-                });
-           
+      <div class="episode-card">
+        <img class="episode-img" src="https://via.placeholder.com/400x140?text=Episode+4" alt="Episode 4" />
+        <div class="episode-info">
+          <div class="episode-title">Episode 4: Aftermath</div>
+          <div class="episode-desc">The world deals with the consequences of the outbreak.</div>
+          <button class="play-button" onclick="loadEpisode(4)">▶ Play Episode 4</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const episodeData = {
+      1: {
+        url: 'https://gradejumper.site/lightmist83.live/file2/qfxJgoxM+CVNB4F9jpRo5Fs4pkEATQ0EwyphRxqg5oJwrwb0PUU2M7SCmqIp+PxTLP5d6ktjKVB4z1kG~26nRrLff0Dc1jbbNheA5VZB7bmM4lEmwdaDdhMai62GxGbAa32Bv687iBfy7JZT51vFftbJLmuqH7F0y5CECkhaX04=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+        title: 'Episode 1: A New Beginning',
+        description: 'The zombie outbreak begins as heroes fall prey to the virus.'
+      },
+      2: {
+        url: 'https://gradejumper.site/rainwhisper40.xyz/file2/Y0EYVi7dt0daFDPM5cG+h9XLg5MHMrC2Sergeh1PnQZkzIwY+4meStASsaVyEfwwXBhqEDCC+yHRj~DeDwFw5qouN53~13VidNCS1S+5r+YPV9AqcVSmlXmCfw2cCXHXnoYvzS2frR84iSBzw6N+ylUzkQ2eZ13VklBPo7Fhygg=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+        title: 'Episode 2: Infection Spreads',
+        description: 'The remaining heroes struggle to contain the outbreak.'
+      },
+      3: {
+        url: 'https://gradejumper.site/snowblink22.pro/file2/9mRw6oOhPUpNeUvUxa0yQ8QpKonu2006kreM8QnBJUJUXDYSQIB6lKos7aEJkEOEaTQngu1MfbqZ2aJcr3oJaazbz6v9HJWfpLdIuskBUeR+AuPIUxyJvprkBbE9hJyhO1Zh9I4auR3~hx~xuY+CzyT4UGVXgsZw6wISw+CLAGU=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+        title: 'Episode 3: Last Stand',
+        description: 'The final survivors make their desperate last stand.'
+      },
+      4: {
+        url: 'https://gradejumper.site/lightmist83.live/file2/~c0yfaB3IPjkwxDB+aVPEiRBudABplWPpZqQPCP8U0h8~gaF7PtvEWHZUxBdhd3bZBDKCe49ISW6DAkuG~qGLwafP9nH3W~A45IazL+3dN5StxCW0~eKrfRhr530NbbA5rmQKrq23W0q9n89zFi+v3JFN6jKQLuheH611LGcHpE=/MTA4MA==/aW5kZXgubTN1OA==.m3u8',
+        title: 'Episode 4: Aftermath',
+        description: 'The world deals with the consequences of the outbreak.'
+      }
+    };
+
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoContainer = document.getElementById('videoContainer');
+    const episodesList = document.getElementById('episodesList');
+    const videoInfo = document.getElementById('videoInfo');
+    const backButton = document.getElementById('backButton');
+
+    function loadEpisode(ep) {
+      const episode = episodeData[ep];
+      if (!episode) {
+        showError('Episode not found');
+        return;
+      }
+
+      // Show loading state
+      videoInfo.innerHTML = `<div class="loading">Loading ${episode.title}...</div>`;
+      videoContainer.style.display = 'block';
+      episodesList.style.display = 'none';
+
+      // Set video source and info
+      videoPlayer.src = episode.url;
+      videoInfo.innerHTML = `
+        <h3>${episode.title}</h3>
+        <p>${episode.description}</p>
+      `;
+
+      videoPlayer.load();
+      videoPlayer.play().catch(e => {
+        showError('Error playing video: ' + e.message);
+      });
+    }
+
+    function showError(message) {
+      videoInfo.innerHTML = `<div class="error">${message}</div>`;
+    }
+
+    backButton.addEventListener('click', () => {
+      videoContainer.style.display = 'none';
+      episodesList.style.display = 'grid';
+      videoPlayer.pause();
+    });
+
+    // Handle URL parameters for direct episode loading
+    const urlParams = new URLSearchParams(window.location.search);
+    const episodeParam = urlParams.get('episode');
+    if (episodeParam) {
+      loadEpisode(parseInt(episodeParam));
+    }
+  </script>
+</body>
 </html>
