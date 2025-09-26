@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <title>Marvel Zombies (2025)</title>
   <style>
     body {
-      background: #121212;
+      background: #0a0a0a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 800 800"><path fill="%231a1a1a" d="M400 0h400v400H400zM0 400h400v400H0z"/></svg>');
       color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Bangers', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0; padding: 20px;
       display: flex;
       flex-direction: column;
@@ -17,9 +18,21 @@
     }
     h1 {
       color: #e23636;
-      text-shadow: 0 0 10px #e23636;
+      text-shadow: 0 0 10px #e23636, 0 0 20px #e23636, 0 0 30px #e23636;
       margin-bottom: 30px;
       text-align: center;
+      font-size: 3em;
+      letter-spacing: 2px;
+      position: relative;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, #e23636, transparent);
     }
     .episodes {
       display: grid;
@@ -29,23 +42,46 @@
       max-width: 1000px;
     }
     .episode-card {
-      background: #222;
+      background: #1a1a1a;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease;
+      transition: all 0.3s ease;
+      border: 1px solid #e23636;
+      position: relative;
+    }
+    .episode-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23e23636" opacity="0.1" d="M20,20 Q30,10 40,20 T60,20 T80,20 T100,20 T100,40 T80,40 T60,40 T40,40 T20,40 Z"/></svg>');
+      pointer-events: none;
     }
     .episode-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #e23636;
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 30px #e23636, 0 0 15px #e23636 inset;
     }
     .episode-img {
       width: 100%;
       height: 140px;
       object-fit: cover;
-      filter: brightness(0.9);
+      filter: brightness(0.8) contrast(1.2) sepia(0.2);
+      position: relative;
+    }
+    .episode-img::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23e23636" opacity="0.3" d="M30,30 Q40,20 50,30 T70,30 T90,30 T90,50 T70,50 T50,50 T30,50 Z"/></svg>');
+      pointer-events: none;
     }
     .episode-info {
       padding: 15px;
@@ -65,16 +101,31 @@
       background-color: #e23636;
       border: none;
       color: white;
-      padding: 10px 15px;
-      font-size: 1em;
+      padding: 12px 15px;
+      font-size: 1.1em;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 0 0 8px 8px;
       user-select: none;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       width: 100%;
+      font-family: 'Bangers', cursive;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+    .play-button::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: #8a1a1a;
     }
     .play-button:hover {
-      background-color: #b22222;
+      background-color: #8a1a1a;
+      letter-spacing: 2px;
     }
     @media (max-width: 500px) {
       .episode-img {
@@ -84,34 +135,35 @@
   </style>
 </head>
 <body>
-  <h1>Marvel Zombies - Season 1</h1>
+  <h1>Marvel Zombies</h1>
+  <h2>Season 1</h2>
   <div class="episodes">
     <div class="episode-card">
       <img src="https://wsrv.nl/?url=https://image.tmdb.org/t/p/original/25QjykMVOADHoKBre3bLovFrz0j.jpg" alt="Episode 1" class="episode-img" />
       <div class="episode-info">
         <div class="episode-title">Episode 1</div>
-        <button class="play-button" onclick="playEpisode(1)">▶ Play Episode 1</button>
+        <button class="play-button" onclick="playEpisode(1)">▶ Play</button>
       </div>
     </div>
     <div class="episode-card">
       <img src="https://wsrv.nl/?url=https://image.tmdb.org/t/p/original/wHg9X6ufex7RLVNQd8vaeQ1X2QJ.jpg" alt="Episode 2" class="episode-img" />
       <div class="episode-info">
         <div class="episode-title">Episode 2</div>
-        <button class="play-button" onclick="playEpisode(2)">▶ Play Episode 2</button>
+        <button class="play-button" onclick="playEpisode(2)">▶ Play</button>
       </div>
     </div>
     <div class="episode-card">
       <img src="https://wsrv.nl/?url=https://image.tmdb.org/t/p/original/8frDsFuOxAVVFzACTMQsk8vDXcP.jpg" alt="Episode 3" class="episode-img" />
       <div class="episode-info">
         <div class="episode-title">Episode 3</div>
-        <button class="play-button" onclick="playEpisode(3)">▶ Play Episode 3</button>
+        <button class="play-button" onclick="playEpisode(3)">▶ Play</button>
       </div>
     </div>
     <div class="episode-card">
       <img src="https://wsrv.nl/?url=https://image.tmdb.org/t/p/original/qNQjFDAeqMDA3ISOUBYikkaVEI0.jpg" alt="Episode 4" class="episode-img" />
       <div class="episode-info">
         <div class="episode-title">Episode 4</div>
-        <button class="play-button" onclick="playEpisode(4)">▶ Play Episode 4</button>
+        <button class="play-button" onclick="playEpisode(4)">▶ Play</button>
       </div>
     </div>
   </div>
